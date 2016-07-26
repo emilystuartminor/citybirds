@@ -1,0 +1,8 @@
+Update on needed data tables
+
+We realized that we could usefully 
+have a file that shows that includes points
+at which birds were found and a second file that
+shows points at which bird species were absent.
+
+Both files were created
