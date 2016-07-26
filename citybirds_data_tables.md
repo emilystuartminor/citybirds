@@ -1,5 +1,5 @@
 Data Tables
-1. Amy’s original overall birds-households-social data table
+1. Amyâ€™s original overall birds-households-social data table
 2. We will need a total of 6 data tables that will contain some subsections of the original data table
 3. The 6 smaller data table fall into 3 categories:  bird-related data; household-related attributes; social survey data
 
