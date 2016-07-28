@@ -1,0 +1,26 @@
+# Lavaan code
+
+# make sure the package is installed and loaded
+install.packages("lavaan", dependencies = TRUE)
+library(lavaan)
+
+#set your working directory
+setwd("~/Dropbox/0_1_sesync/WORKSPACE")
+
+#load the datafile
+citybirds<-read.csv(file.choose(),header=TRUE)
+
+# define the model
+model1 <- '
+  # regression model here
+    NativeRichness ~ MyYard + NeighbYards
+  # define the latent variables
+    NativeRichness =~ Native_near4
+    MyYard =~ Front_sum8 + Back_sum8 + WFI
+    NeighbYards =~ FS8_200m + BS8_200m + WFI_200m
+  '
+
+# fit the model
+fit<-sem(model1,data=citybirds)
+summary(fit, standardized = TRUE, fit.measures = TRUE, rsq = T)
+
