@@ -24,3 +24,4 @@ model1 <- '
 fit<-sem(model1,data=citybirds)
 summary(fit, standardized = TRUE, fit.measures = TRUE, rsq = T)
 
+# message here to say hello
