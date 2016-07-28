@@ -16,13 +16,15 @@ model1 <- '
     NativeRichness ~ MyYard + NeighbYards
   # define the latent variables
     NativeRichness =~ Native_near4
-    MyYard =~ Front_sum8 + Back_sum8 + WFI
-    NeighbYards =~ FS8_200m + BS8_200m + WFI_200m
+    MyYard =~ WFI + Front_sum8 + Back_sum8
+    NeighbYards =~ WFI_200m + FS8_200m + BS8_200m
+  # should we also define residual correlations? do so below…
+    
   '
 
 # fit the model
 fit<-sem(model1,data=citybirds)
-summary(fit, standardized = TRUE, fit.measures = TRUE, rsq = T)
+summary(fit, standardized = TRUE, fit.measures = TRUE, rsq = T, modindices = TRUE)
 
 # message here to say hello
 
